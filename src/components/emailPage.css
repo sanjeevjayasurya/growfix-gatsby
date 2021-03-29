@@ -1,0 +1,51 @@
+.email-page {
+    margin: 0 auto;
+    line-height: 24px;
+    transition: padding 1s ease-in-out;
+    overflow-x: hidden;
+    background-color: #58c7ff;
+    height: 100vh;
+    padding: 60px;
+    text-align: center;
+}
+
+.skew-color {
+    height: 80vh;
+    width: 100vw;
+    left: 0;
+    background-image: linear-gradient(-180deg, #2eaff0 0, rgba(46, 175, 240, 0) 100%);
+    position: absolute;
+    bottom: 0;
+    transform: skewY(-6deg);
+    pointer-events: none;
+}
+
+.email-page main {
+    background: none;
+    position: relative;
+}
+.email-page header {
+    margin-bottom: 100px;
+}
+
+.email-page h1 {
+    color: #fff;
+    letter-spacing: 0;
+    line-height: 1;
+    margin: 0 auto 40px;
+    font-size: 100px;
+    line-height: 100px;
+    top: -1px;
+    max-width: 720px;
+    margin-bottom: 40px;
+}
+
+.email-page p{
+    color: rgba(255,255,255,.8);
+    margin: 0 auto 60px;
+    width: 592px;
+    font-size: 28px;
+    line-height: 44px;
+    top: 2px;
+}
+
