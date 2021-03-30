@@ -1,0 +1,12 @@
+.radio-label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 8px 0;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 20px;
+    color: #fff;
+    line-height: 34px;
+    top: 1px;
+}

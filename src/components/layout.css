@@ -1,15 +1,17 @@
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  font-family: Slate W01 Bold,Helvetica,Arial,sans-serif!important;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
-body {
+* {
   margin: 0;
   padding: 0;
   position: relative;
   box-sizing: border-box;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: Slate W01 Bold, Helvetica, Arial, sans-serif !important;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+body {
   line-height: 24px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -84,8 +86,8 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -262,8 +264,8 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -279,8 +281,8 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -296,8 +298,8 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -313,8 +315,8 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -330,8 +332,8 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -569,8 +571,8 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier,
+    monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -596,4 +598,127 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 100% !important;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.half-screen {
+  max-width: 50vw;
+  flex: 1;
+  overflow-y: scroll;
+  transform: none;
+  transition: all 0.4s cubic-bezier(0.74, 0, 0.2, 1);
+  padding: 80px;
+}
+
+@media screen and (max-width: 920px) {
+  .half-screen {
+    padding: 40px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .half-screen {
+    padding: 80px 40px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .half-screen {
+    padding: 80px;
+  }
+}
+
+.map {
+  background-image: url(https://yummygum.com/assets/img/contact/map@2x.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 620px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  left: 0;
+}
+
+.blue {
+  background: #58c7ff;
+}
+
+.top {
+  padding-top: 0;
+}
+.mid {
+  margin-bottom: 72px;
+}
+
+.link {
+  display: block;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  line-height: 1.6;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.white:after {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.link:hover {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 21px;
+  height: 21px;
+  border-radius: 5px;
+  background: none;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: rgba(103, 114, 229, 0);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  box-shadow: inset 0 0 0 2px #c1c4cb;
+  margin: 0 12px 0 0;
+  vertical-align: -4px;
+  outline: none;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type=radio]:checked, input[type=checkbox]:checked {
+  background: url("https://yummygum.com/assets/img/components/input/checkmark.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  box-shadow: none;
+  transition: all .15s ease;
 }
