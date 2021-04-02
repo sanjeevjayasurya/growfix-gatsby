@@ -4,10 +4,16 @@ import Heading from './heading'
 import { Formik, Field, Form } from 'formik'
 import { StyledInputField, StyledTextArea } from './textComponents'
 import Button from './button'
+import FormOneSchema from '../validators/formOneValidator'
+import { Link } from 'gatsby'
 
 const choices = ['1 month', '2-3 months', '4+ months']
 const checkboxes = ['Desktop', 'Web', 'Mobile', 'Others']
 
+
+const onSubmit = e => {
+    document.location.href = "/submit"
+}
 
 const FormOne = () => (
     <div className="inner">
@@ -17,7 +23,7 @@ const FormOne = () => (
         <Formik
             validateOnBlur
             initialValues={{
-                radio: '',
+                radio: choices[0],
                 checkbox: '',
                 name: '',
                 company: '',
@@ -25,11 +31,12 @@ const FormOne = () => (
                 budget: '',
                 project: ''
             }}
-            onSubmit={values => console.log(values)}
-        // validationSchema={ }
+            onSubmit={onSubmit}
+            validationSchema={FormOneSchema}
         >
             {({ errors, touched }) => (
                 <Form className="info flex">
+                    {/* {console.log(errors)} */}
                     <div className="left">
                         <Heading secondary light>Timeframe</Heading>
                         <div id="my-radio-group">
@@ -55,13 +62,13 @@ const FormOne = () => (
                         <Heading secondary light>Personal Details</Heading>
                         <div className="contact-info">
                             <div className="mr">
-                                <StyledInputField error={errors.Name && touched.Name ? 'error' : null} id="Name" name="Name" placeholder="Name" />
-                                <StyledInputField error={errors.Company && touched.Company ? 'error' : null} id="Company" name="Company" placeholder="Company" />
-                                <StyledInputField error={errors.Email && touched.Email ? 'error' : null} id="Email" name="Email" placeholder="Email" type="email" />
-                                <StyledInputField error={errors.Budget && touched.Budget ? 'error' : null} id="Budget" name="Budget" placeholder="Budget" />
+                                <StyledInputField error={errors.name && touched.name ? 'error' : null} id="name" name="name" placeholder="Name" />
+                                <StyledInputField error={errors.company && touched.company ? 'error' : null} id="company" name="company" placeholder="Company" />
+                                <StyledInputField error={errors.email && touched.email ? 'error' : null} id="email" name="email" placeholder="Email" type="email" />
+                                <StyledInputField error={errors.budget && touched.budget ? 'error' : null} id="budget" name="budget" placeholder="Budget" />
                             </div>
-                            <div className="yz" style={{ width: "100%" }}>
-                                <Field error={errors.Project && touched.Project ? 'error' : null} id="Project" name="Project" placeholder="Project" component={StyledTextArea} />
+                            <div style={{ width: "100%" }}>
+                                <Field error={errors.project && touched.project ? 'error' : null} id="project" name="project" placeholder="Project" component={StyledTextArea} />
                             </div>
                         </div>
                     </div>
