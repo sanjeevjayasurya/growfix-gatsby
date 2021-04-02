@@ -1,4 +1,8 @@
-.radio-label {
+#my-radio-group {
+    margin-bottom: 32px;
+}
+
+.radio-btn {
     white-space: nowrap;
     text-overflow: ellipsis;
     padding: 8px 0;
@@ -10,6 +14,20 @@
     line-height: 34px;
     top: 1px;
 }
-#my-radio-group {
-    margin-bottom: 32px;
+
+.left {
+    max-width: 300px;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.contact-info {
+    display: flex;
+}
+
+.mr {
+    margin-right: 48px;
 }

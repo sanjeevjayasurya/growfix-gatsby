@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 
 const Heading = styled.h1`
-    margin-bottom: 16px;
     ${props => props.primary && css`
     font-size: 76px;
     line-height: 80px;
