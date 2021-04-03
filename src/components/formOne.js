@@ -5,7 +5,6 @@ import { Formik, Field, Form } from 'formik'
 import { StyledInputField, StyledTextArea } from './textComponents'
 import Button from './button'
 import FormOneSchema from '../validators/formOneValidator'
-import { Link } from 'gatsby'
 
 const choices = ['1 month', '2-3 months', '4+ months']
 const checkboxes = ['Desktop', 'Web', 'Mobile', 'Others']
@@ -36,7 +35,6 @@ const FormOne = () => (
         >
             {({ errors, touched }) => (
                 <Form className="info flex">
-                    {/* {console.log(errors)} */}
                     <div className="left">
                         <Heading secondary light>Timeframe</Heading>
                         <div id="my-radio-group">

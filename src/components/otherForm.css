@@ -1,0 +1,13 @@
+.contact-info {
+    display: flex;
+}
+
+.margin-right {
+    margin-right: 48px;
+    width: 100%;
+}
+
+.textarea-container {
+    width: 100%;
+    height: 328px;
+}

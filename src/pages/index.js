@@ -1,7 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import Heading from "../components/heading"
 import Text from "../components/text"
@@ -14,21 +11,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <div className="half-screen">
-        {/* <div className="inner">
-          <div className="top">
-            <Heading primary>We're here</Heading>
-            <div className="mid">
-              <Text style={{ marginBottom: "72px" }}>Our door is always open for a good cup of coffee.</Text>
-            </div>
-          </div>
-          <div className="info">
-            <Heading secondary>Our Office</Heading>
-            <Text> Jacob van Lennepkade 334-H</Text>
-            <Text>1053 NJ Amsterdam</Text>
-            <Text>The Netherlands 🇳🇱</Text>
-          </div>
-        </div>
-        <div className="map"></div> */}
         {choice === '' && (
           <>
             <div className="inner">
